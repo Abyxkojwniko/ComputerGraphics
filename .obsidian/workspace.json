@@ -1,0 +1,224 @@
+{
+  "main": {
+    "id": "3ca15302d0b7459c",
+    "type": "split",
+    "children": [
+      {
+        "id": "a4781e43a3aa5945",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b14f46c245184842",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "game101/01变换/01 变换.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "01 变换"
+            }
+          },
+          {
+            "id": "a15525d4da06c36f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "game101/02 三角形的光栅化/02 三角形的光栅化.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "02 三角形的光栅化"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "dceccc14623f3c14",
+    "type": "split",
+    "children": [
+      {
+        "id": "dcfd4c3d019319df",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "093b1eab6c67dc9f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "aedcc95c9e3411c3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "832f61cfb7236d84",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "440265dc34ceed35",
+    "type": "split",
+    "children": [
+      {
+        "id": "796adde4edc798ad",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "643ceff6db31c260",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "readme.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "readme 的反向链接列表"
+            }
+          },
+          {
+            "id": "777645f6d7cc2d23",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "readme.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "readme 的出链列表"
+            }
+          },
+          {
+            "id": "22e89d2d7240b73e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "ec8f4f24f163435c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "readme.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "readme 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "a15525d4da06c36f",
+  "lastOpenFiles": [
+    "game101/02 三角形的光栅化/Pasted image 20250714110645.png",
+    "game101/02 三角形的光栅化",
+    "game101/01变换/01 变换.md",
+    "readme.md",
+    "game101/01变换/Pasted image 20250710143553.png",
+    "game101/02 三角形的光栅化/02 三角形的光栅化.md",
+    "未命名",
+    "game101/未命名.md",
+    "game101/01变换",
+    "cpplearn/08.结构体.md",
+    "cpplearn/07.类别.md",
+    "cpplearn/06.const.md",
+    "cpplearn/05.指针.md",
+    "cpplearn/01.变量.md",
+    "cpplearn/02.头文件.md",
+    "cpplearn/03.重定义.md",
+    "cpplearn/04.类型.md",
+    "cpplearn/image-4.png",
+    "game101/01变换/Pasted image 20250711173530.png",
+    "game101/01变换/Pasted image 20250711173510.png",
+    "game101/01变换/Pasted image 20250711173458.png",
+    "game101/01变换/Pasted image 20250711173449.png",
+    "game101/01变换/Pasted image 20250711170245.png",
+    "game101/01变换/Pasted image 20250711170227.png",
+    "game101/01变换/Pasted image 20250711165648.png",
+    "game101/01变换/Pasted image 20250711150820.png",
+    "cpplearn/lecture2/未命名.md",
+    "高等代数/第一课.md",
+    "cpplearn/lecture6",
+    "未命名 1",
+    "game101",
+    "高等代数/高等代数指导书，复旦姚慕生，谢启鸿.pdf",
+    "高等代数/未确认 344417.crdownload",
+    "cpplearn/lecture5/未命名.md",
+    "高等代数"
+  ]
+}
