@@ -8,31 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "38a3f1b137cc503d",
+            "id": "d1a34458aa133f46",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cpplearn/02.头文件.md",
+                "file": "c++/cpplearn/cpplearnnote/13.C风格字符串和数组用法.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02.头文件"
-            }
-          },
-          {
-            "id": "ab1eb42d392a403a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "cpplearn/09.using命名空间.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "09.using命名空间"
+              "title": "13.C风格字符串和数组用法"
             }
           }
         ]
@@ -182,24 +168,30 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "38a3f1b137cc503d",
+  "active": "d1a34458aa133f46",
   "lastOpenFiles": [
+    "c++/cpplearn/cpplearnpractice/13/my_strcat.exe",
+    "c++/cpplearn/cpplearnpractice/13/my_strcat.cpp",
+    "c++/cpplearn/cpplearnpractice/13/编写一个函数 `my_strcat`，其功能与标准库函数 `strcat` 类似，用于将源字符串追加到目标字符串的末尾。",
+    "c++/cpplearn/cpplearnpractice/13/my_strcpy.exe",
+    "c++/cpplearn/cpplearnpractice/13/my_strcpy.cpp",
+    "c++/cpplearn/cpplearnpractice/13",
+    "c++/cpplearn/cpplearnnote/readme.md",
+    "c++/cpplearn/cpplearnnote/13.C风格字符串和数组用法.md",
+    "c++/cpplearn/cpplearnnote/11.vector类用法.md",
+    "c++/cpplearn/cpplearnnote/12.迭代器.md",
+    "c++/cpplearn/cpplearnpractice/12/hebingvector.exe",
+    "c++/cpplearn/cpplearnpractice/12/hebingvector.cpp",
+    "c++/cpplearn/cpplearnpractice/12/fanxiangdayin.exe",
+    "c++/cpplearn/cpplearnpractice/12/fanxiangdayin.cpp",
+    "c++/cpplearn/cpplearnpractice/12/sum.exe",
+    "c++/cpplearn/cpplearnnote/03.重定义.md",
     "cpplearn/11.vector类用法.md",
-    "cpplearnpractice/10/stockmanagesystem.exe",
-    "cpplearnpractice/10/stockmanagesystem.cpp",
-    "cpplearnpractice/10/studentmanagesystem.exe",
-    "cpplearnpractice/10/studentmanagesystem.cpp",
-    "cpplearnpractice/10",
     "cpplearn/09.using命名空间.md",
     "cpplearn/08.结构体.md",
     "game101/02 三角形的光栅化/02 三角形的光栅化.md",
     "game101/02 三角形的光栅化/Pasted image 20250715140334.png",
     "cpplearn/10.string类用法.md",
-    "cpplearnpractice/09/test_email_accuracy.cpp",
-    "cpplearnpractice/09/test_email_accuracy.cp[",
-    "cpplearnpractice/09/simplewordanalysis.cpp",
-    "cpplearnpractice/08/08.struce.exe",
-    "cpplearnpractice/08/08.struce.cpp",
     "cpplearn/08.结构体/08.结构体.md",
     "cpplearn/02.头文件.md",
     "论文/NeRF Representing Scenes as Neural Radiance Fields for View Synthesis/NeRF Representing Scenes as Neural Radiance Fields for View Synthesis.md",
@@ -223,8 +215,6 @@
     "cpplearn/01.变量.md",
     "cpplearn/03.重定义.md",
     "cpplearn/04.类型.md",
-    "cpplearn/lecture2/未命名.md",
-    "高等代数/第一课.md",
-    "cpplearn/lecture5/未命名.md"
+    "cpplearn/lecture2/未命名.md"
   ]
 }
