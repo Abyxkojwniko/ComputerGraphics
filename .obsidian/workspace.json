@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "b132e24252bd7f6b",
+        "id": "3a3373ffc4dcc7ef",
         "type": "tabs",
         "children": [
           {
-            "id": "d1a34458aa133f46",
+            "id": "39a61c1d4661c760",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "c++/cpplearn/cpplearnnote/13.C风格字符串和数组用法.md",
+                "file": "game101/game101笔记/02 三角形的光栅化/02 三角形的光栅化.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "13.C风格字符串和数组用法"
+              "title": "02 三角形的光栅化"
             }
           }
         ]
@@ -168,53 +168,53 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "d1a34458aa133f46",
+  "active": "39a61c1d4661c760",
   "lastOpenFiles": [
-    "c++/cpplearn/cpplearnpractice/13/my_strcat.exe",
-    "c++/cpplearn/cpplearnpractice/13/my_strcat.cpp",
-    "c++/cpplearn/cpplearnpractice/13/编写一个函数 `my_strcat`，其功能与标准库函数 `strcat` 类似，用于将源字符串追加到目标字符串的末尾。",
-    "c++/cpplearn/cpplearnpractice/13/my_strcpy.exe",
-    "c++/cpplearn/cpplearnpractice/13/my_strcpy.cpp",
-    "c++/cpplearn/cpplearnpractice/13",
-    "c++/cpplearn/cpplearnnote/readme.md",
+    "game101/game101笔记/02 三角形的光栅化/Pasted image 20250721162126.png",
+    "game101/game101笔记/02 三角形的光栅化/Pasted image 20250721155247.png",
+    "game101/game101笔记/02 三角形的光栅化/Pasted image 20250721153559.png",
+    "game101/game101笔记/02 三角形的光栅化/Pasted image 20250721153428.png",
+    "game101/game101笔记/02 三角形的光栅化/Pasted image 20250721153152.png",
+    "game101/game101笔记/02 三角形的光栅化/Pasted image 20250721152409.png",
+    "game101/game101笔记/02 三角形的光栅化/Pasted image 20250721152332.png",
+    "game101/game101笔记/02 三角形的光栅化/Pasted image 20250721114733.png",
+    "game101/game101笔记/02 三角形的光栅化/Pasted image 20250721114548.png",
+    "game101/game101笔记/02 三角形的光栅化/Pasted image 20250721114230.png",
+    "game101/game101笔记/02 三角形的光栅化/Pasted image 20250721113630.png",
+    "c++/cpplearn/cpplearnnote/17.函数用法.md",
+    "c++/cpplearn/cpplearnpractice/17/callback.exe",
+    "c++/cpplearn/cpplearnpractice/17/callback.cpp",
+    "c++/cpplearn/cpplearnpractice/17/fruitsort.cpp",
+    "c++/cpplearn/cpplearnpractice/17/sort.exe",
+    "c++/cpplearn/cpplearnpractice/17/sort.cpp",
+    "c++/cpplearn/cpplearnpractice/17/Fibonacci.exe",
+    "c++/cpplearn/cpplearnpractice/17/Fibonacci.cpp",
+    "c++/cpplearn/cpplearnpractice/17",
+    "c++/cpplearn/cpplearnnote/16.表达式与作用域.md",
+    "c++/cpplearn/cpplearnpractice/16/Fibonacci.exe",
+    "c++/cpplearn/cpplearnpractice/16/Fibonacci.cpp",
+    "c++/cpplearn/cpplearnnote/14.多维数组.md",
+    "c++/cpplearn/cpplearnnote/15.运算符详解.md",
+    "articlereadandrepublic/NeRF Representing Scenes as Neural Radiance Fields for View Synthesis/NeRF Representing Scenes as Neural Radiance Fields for View Synthesis.md",
     "c++/cpplearn/cpplearnnote/13.C风格字符串和数组用法.md",
+    "c++/cpplearn/cpplearnnote/readme.md",
     "c++/cpplearn/cpplearnnote/11.vector类用法.md",
     "c++/cpplearn/cpplearnnote/12.迭代器.md",
-    "c++/cpplearn/cpplearnpractice/12/hebingvector.exe",
-    "c++/cpplearn/cpplearnpractice/12/hebingvector.cpp",
-    "c++/cpplearn/cpplearnpractice/12/fanxiangdayin.exe",
-    "c++/cpplearn/cpplearnpractice/12/fanxiangdayin.cpp",
-    "c++/cpplearn/cpplearnpractice/12/sum.exe",
     "c++/cpplearn/cpplearnnote/03.重定义.md",
     "cpplearn/11.vector类用法.md",
     "cpplearn/09.using命名空间.md",
     "cpplearn/08.结构体.md",
     "game101/02 三角形的光栅化/02 三角形的光栅化.md",
-    "game101/02 三角形的光栅化/Pasted image 20250715140334.png",
     "cpplearn/10.string类用法.md",
     "cpplearn/08.结构体/08.结构体.md",
     "cpplearn/02.头文件.md",
     "论文/NeRF Representing Scenes as Neural Radiance Fields for View Synthesis/NeRF Representing Scenes as Neural Radiance Fields for View Synthesis.md",
-    "论文/NeRF Representing Scenes as Neural Radiance Fields for View Synthesis/Pasted image 20250714182046.png",
-    "论文/NeRF Representing Scenes as Neural Radiance Fields for View Synthesis/Pasted image 20250714181814.png",
-    "论文/NeRF Representing Scenes as Neural Radiance Fields for View Synthesis/Pasted image 20250714175617.png",
-    "论文/NeRF Representing Scenes as Neural Radiance Fields for View Synthesis/Pasted image 20250714174938.png",
-    "论文/NeRF Representing Scenes as Neural Radiance Fields for View Synthesis/Pasted image 20250714174818.png",
-    "论文/NeRF Representing Scenes as Neural Radiance Fields for View Synthesis/Pasted image 20250714174754.png",
-    "论文/NeRF Representing Scenes as Neural Radiance Fields for View Synthesis/Pasted image 20250714174655.png",
-    "论文/NeRF Representing Scenes as Neural Radiance Fields for View Synthesis/Pasted image 20250714174243.png",
     "game101/02 三角形的光栅化/未命名.md",
-    "game101/02 三角形的光栅化/Pasted image 20250714113019.png",
     "cpplearn/lecture1/lecture 1.md",
     "game101/01变换/01 变换.md",
     "readme.md",
     "game101/未命名.md",
     "cpplearn/07.类别.md",
-    "cpplearn/06.const.md",
-    "cpplearn/05.指针.md",
-    "cpplearn/01.变量.md",
-    "cpplearn/03.重定义.md",
-    "cpplearn/04.类型.md",
-    "cpplearn/lecture2/未命名.md"
+    "cpplearn/06.const.md"
   ]
 }
