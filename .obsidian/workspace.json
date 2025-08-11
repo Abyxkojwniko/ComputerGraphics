@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "game101/game101笔记/02 三角形的光栅化/02 三角形的光栅化.md",
+                "file": "game101/game101笔记/03 着色/着色.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02 三角形的光栅化"
+              "title": "着色"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "440265dc34ceed35",
@@ -170,29 +171,37 @@
   },
   "active": "39a61c1d4661c760",
   "lastOpenFiles": [
-    "game101/game101笔记/02 三角形的光栅化/Pasted image 20250721162126.png",
-    "game101/game101笔记/02 三角形的光栅化/Pasted image 20250721155247.png",
-    "game101/game101笔记/02 三角形的光栅化/Pasted image 20250721153559.png",
-    "game101/game101笔记/02 三角形的光栅化/Pasted image 20250721153428.png",
-    "game101/game101笔记/02 三角形的光栅化/Pasted image 20250721153152.png",
-    "game101/game101笔记/02 三角形的光栅化/Pasted image 20250721152409.png",
-    "game101/game101笔记/02 三角形的光栅化/Pasted image 20250721152332.png",
-    "game101/game101笔记/02 三角形的光栅化/Pasted image 20250721114733.png",
-    "game101/game101笔记/02 三角形的光栅化/Pasted image 20250721114548.png",
-    "game101/game101笔记/02 三角形的光栅化/Pasted image 20250721114230.png",
-    "game101/game101笔记/02 三角形的光栅化/Pasted image 20250721113630.png",
+    "game101/game101笔记/03 着色/Pasted image 20250811145319.png",
+    "game101/game101笔记/03 着色/Pasted image 20250811144913.png",
+    "game101/game101笔记/03 着色/Pasted image 20250811144429.png",
+    "game101/game101笔记/03 着色/Pasted image 20250811141930.png",
+    "game101/game101笔记/03 着色/Pasted image 20250811141920.png",
+    "game101/game101笔记/03 着色/Pasted image 20250811141908.png",
+    "c++/cpplearn/cpplearnnote/18.类的基本用法.md",
+    "c++/cpplearn/cpplearnpractice/18/mystring/program.exe",
+    "c++/cpplearn/cpplearnpractice/18/mystring/Mystring.h",
+    "c++/cpplearn/cpplearnpractice/18/mystring/main.cpp",
+    "c++/cpplearn/cpplearnpractice/18/mystring/Mytring.exe",
+    "c++/cpplearn/cpplearnpractice/18/mystring/Mystring.cpp",
+    "c++/cpplearn/cpplearnpractice/18/mystring/Mytring.h",
+    "c++/cpplearn/cpplearnpractice/18/mystring",
+    "c++/cpplearn/cpplearnpractice/18/student/student.h",
+    "c++/cpplearn/cpplearnpractice/18/student/student.cpp",
+    "c++/cpplearn/cpplearnpractice/18/student/program.exe",
+    "c++/cpplearn/cpplearnnote/19.继承与多态.md",
+    "c++/cpplearn/cpplearnnote/未命名.md",
     "c++/cpplearn/cpplearnnote/17.函数用法.md",
-    "c++/cpplearn/cpplearnpractice/17/callback.exe",
-    "c++/cpplearn/cpplearnpractice/17/callback.cpp",
-    "c++/cpplearn/cpplearnpractice/17/fruitsort.cpp",
-    "c++/cpplearn/cpplearnpractice/17/sort.exe",
-    "c++/cpplearn/cpplearnpractice/17/sort.cpp",
-    "c++/cpplearn/cpplearnpractice/17/Fibonacci.exe",
-    "c++/cpplearn/cpplearnpractice/17/Fibonacci.cpp",
-    "c++/cpplearn/cpplearnpractice/17",
+    "game101/game101笔记/03 着色/着色.md",
+    "game101/game101笔记/03 着色/Pasted image 20250723141924.png",
+    "game101/game101笔记/03 着色/Pasted image 20250723141748.png",
+    "game101/game101笔记/03 着色/Pasted image 20250723141306.png",
+    "game101/game101笔记/03 着色/Pasted image 20250723135816.png",
+    "game101/game101笔记/03 着色/Pasted image 20250723134910.png",
+    "game101/game101笔记/02 三角形的光栅化/02 三角形的光栅化.md",
+    "c++/cpplearn/cpplearnnote/06.const.md",
+    "readme.md",
+    "articlereadandrepublic/2021_acm_nerf/NERF笔记.md",
     "c++/cpplearn/cpplearnnote/16.表达式与作用域.md",
-    "c++/cpplearn/cpplearnpractice/16/Fibonacci.exe",
-    "c++/cpplearn/cpplearnpractice/16/Fibonacci.cpp",
     "c++/cpplearn/cpplearnnote/14.多维数组.md",
     "c++/cpplearn/cpplearnnote/15.运算符详解.md",
     "articlereadandrepublic/NeRF Representing Scenes as Neural Radiance Fields for View Synthesis/NeRF Representing Scenes as Neural Radiance Fields for View Synthesis.md",
@@ -207,14 +216,6 @@
     "game101/02 三角形的光栅化/02 三角形的光栅化.md",
     "cpplearn/10.string类用法.md",
     "cpplearn/08.结构体/08.结构体.md",
-    "cpplearn/02.头文件.md",
-    "论文/NeRF Representing Scenes as Neural Radiance Fields for View Synthesis/NeRF Representing Scenes as Neural Radiance Fields for View Synthesis.md",
-    "game101/02 三角形的光栅化/未命名.md",
-    "cpplearn/lecture1/lecture 1.md",
-    "game101/01变换/01 变换.md",
-    "readme.md",
-    "game101/未命名.md",
-    "cpplearn/07.类别.md",
-    "cpplearn/06.const.md"
+    "cpplearn/02.头文件.md"
   ]
 }
