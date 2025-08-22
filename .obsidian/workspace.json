@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "game101/game101笔记/04 几何部分/Geometry.md",
+                "file": "game101/game101笔记/05 光线追踪/光线追踪.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Geometry"
+              "title": "光线追踪"
             }
           }
         ]
@@ -171,6 +171,23 @@
   },
   "active": "a79d0c1f1399fd4e",
   "lastOpenFiles": [
+    "game101/game101笔记/05 光线追踪/Pasted image 20250821161035.png",
+    "game101/game101笔记/05 光线追踪/Pasted image 20250821160848.png",
+    "game101/game101笔记/05 光线追踪/Pasted image 20250821160722.png",
+    "game101/game101笔记/05 光线追踪/Pasted image 20250821153009.png",
+    "game101/game101笔记/05 光线追踪/Pasted image 20250821152043.png",
+    "game101/game101笔记/05 光线追踪/Pasted image 20250821151141.png",
+    "game101/game101笔记/05 光线追踪/Pasted image 20250821150754.png",
+    "game101/game101笔记/05 光线追踪/Pasted image 20250821145403.png",
+    "c++/cpplearn/cpplearnnote/23.可调用对象.md",
+    "c++/cpplearn/cpplearnpractice/23/main.exe",
+    "c++/cpplearn/cpplearnpractice/23/main.cpp",
+    "game101/game101笔记/05 光线追踪/光线追踪.md",
+    "c++/cpplearn/cpplearnpractice/23",
+    "game101/game101笔记/05 光线追踪/Pasted image 20250820171307.png",
+    "game101/game101笔记/05 光线追踪/Pasted image 20250820171038.png",
+    "game101/game101笔记/05 光线追踪/Pasted image 20250820170926.png",
+    "game101/game101笔记/04 几何部分/Geometry.md",
     "c++/cpplearn/cpplearnpractice/22/practice2/main.exe",
     "c++/cpplearn/cpplearnpractice/22/practice2/main.cpp",
     "c++/cpplearn/cpplearnpractice/22/practice2/GraphNode.cpp",
@@ -178,23 +195,7 @@
     "c++/cpplearn/cpplearnpractice/22/practice2",
     "c++/cpplearn/cpplearnpractice/22/practice",
     "c++/cpplearn/cpplearnpractice/22/practice1/main.exe",
-    "c++/cpplearn/cpplearnpractice/22/practice1/main.cpp",
-    "c++/cpplearn/cpplearnpractice/22/practice1/ResourceManager.cpp",
-    "c++/cpplearn/cpplearnpractice/22/practice1/ResourceManage.cpp",
-    "c++/cpplearn/cpplearnpractice/22/practice1/ResourceManager.h",
     "c++/cpplearn/cpplearnnote/22.智能指针.md",
-    "game101/game101笔记/04 几何部分/光线追踪.md",
-    "game101/game101笔记/04 几何部分/Pasted image 20250819151057.png",
-    "game101/game101笔记/04 几何部分/Pasted image 20250819151045.png",
-    "game101/game101笔记/04 几何部分/Pasted image 20250819145933.png",
-    "game101/game101笔记/04 几何部分/Pasted image 20250819145920.png",
-    "game101/game101笔记/04 几何部分/Pasted image 20250819145904.png",
-    "game101/game101笔记/04 几何部分/Pasted image 20250819145535.png",
-    "game101/game101笔记/04 几何部分/Geometry.md",
-    "game101/game101笔记/04 几何部分/Pasted image 20250819144805.png",
-    "game101/game101笔记/04 几何部分/Pasted image 20250819144339.png",
-    "game101/game101笔记/04 几何部分/Pasted image 20250819142111.png",
-    "game101/game101笔记/04 几何部分/Pasted image 20250819141531.png",
     "c++/cpplearn/cpplearnnote/21.内存管理.md",
     "c++/cpplearn/cpplearnnote/20.类相关面试题.md",
     "c++/cpplearn/cpplearnnote/10.string类用法.md",
@@ -215,7 +216,6 @@
     "c++/cpplearn/cpplearnnote/11.vector类用法.md",
     "c++/cpplearn/cpplearnnote/12.迭代器.md",
     "c++/cpplearn/cpplearnnote/03.重定义.md",
-    "cpplearn/11.vector类用法.md",
-    "cpplearn/09.using命名空间.md"
+    "cpplearn/11.vector类用法.md"
   ]
 }
