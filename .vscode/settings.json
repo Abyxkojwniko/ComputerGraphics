@@ -58,6 +58,9 @@
         "ratio": "cpp",
         "semaphore": "cpp",
         "stop_token": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "complex": "cpp",
+        "cstdarg": "cpp",
+        "list": "cpp"
     }
 }
