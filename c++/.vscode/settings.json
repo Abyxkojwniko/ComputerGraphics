@@ -60,6 +60,8 @@
         "thread": "cpp",
         "typeinfo": "cpp",
         "variant": "cpp",
-        "cstdarg": "cpp"
+        "cstdarg": "cpp",
+        "complex": "cpp",
+        "list": "cpp"
     }
 }
