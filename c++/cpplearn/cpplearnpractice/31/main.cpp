@@ -19,5 +19,16 @@ int main(){
     countAll(10, &a, "dhkal");
     std::cout << sum(1, 2, 3, 4) << std::endl;
     std::cout << sum(1.5, 2.3, 3.7, 4.4) << std::endl;
+
+
+    std::cout << allNot(false, false, true) << std::endl;
+    std::cout << sumLeftFold(1, 2, 3, 4, 5) << std::endl;
+    std::cout << sumrightFold(1, 2, 3, 4) << std::endl;
+    std::cout << multiRightFlod(1, 2, 3, 4) << std::endl;
+    printFoldAll(1, 2, 3, 4);
+
+    MyPoint point1(1, 2), point2(3, 4), point3(5, 6);
+    auto result = sumPoints(point1, point2, point3);
+    std::cout << result.x << " " << result.y << std::endl;
     return 0;
 }

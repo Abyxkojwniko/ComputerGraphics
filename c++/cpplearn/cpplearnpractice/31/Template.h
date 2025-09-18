@@ -81,3 +81,42 @@ auto sum(Args... args) -> decltype((args + ...)){
     return (args + ...);
 };
 
+template <typename... Args>
+bool allNot(const Args&... args){
+    return (!args && ...);
+};
+
+template <typename... Args>
+auto sumLeftFold(const Args&... args)->decltype((args + ...)){
+    return (args + ...);
+};
+
+template <typename... Args>
+auto sumrightFold(const Args&... args)->decltype((... + args)){
+    return (... + args);
+};
+
+template <typename... Args>
+auto multiRightFlod(const Args&... args)->decltype((args * ...)){
+    return (... * args);
+};
+
+template <typename... Args>
+void printFoldAll(const Args&... args){
+    (std::cout << ... << args) << std::endl;
+    (std::cout << (... << args)) << std::endl;
+};
+
+
+struct MyPoint{
+    int x, y;
+    MyPoint(int a, int b):x(a), y(b){};
+    MyPoint operator + (const MyPoint& other) const{
+        return MyPoint(x + other.x, y + other.y);
+    };
+
+};
+template <typename... Args>
+auto sumPoints(const Args&... args)->decltype((args + ...)){
+    return (args + ...);
+};
