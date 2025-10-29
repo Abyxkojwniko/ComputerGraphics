@@ -1,0 +1,217 @@
+#define GLEW_STATIC //用于连接静态库
+#include <GL/glew.h> 
+#include <GLFW/glfw3.h>
+#include <iostream> 
+#include <fstream>
+#include <string>
+#include <sstream>
+
+#define ASSERT(x) if(!(x)) __debugbreak();
+#define GLCall(x) GLClearError();\
+    x;\
+    ASSERT(GLLogCall(#x, __FILE__, __LINE__))
+static void GLClearError() {
+    while (glGetError() != GL_NO_ERROR); 
+}
+
+static bool GLLogCall(const char* function, const char* file, int line) {
+    while (GLenum error = glGetError()) {
+        std::cout << "[OpenGL_Errot] (" << error << ")" << function << 
+            " " << file << " " << line << std::endl;
+        return false;
+    }
+    return true;
+}
+
+struct ShaderProgramSource {
+    std::string VertexSource;
+    std::string FragmentSource;
+};
+
+//读取着色器内容
+static ShaderProgramSource ParseShader(const std::string& filepath) {
+    std::ifstream stream(filepath);
+    std::string line;
+    std::stringstream ss[2];
+    enum class ShaderType {
+        None = -1, VERTEX = 0, FRAGMENT = 1
+    };
+    ShaderType type = ShaderType::None;
+    while (getline(stream, line)) {
+        if (line.find("#shader") != std::string::npos) {
+            if (line.find("vertex") != std::string::npos) {
+                type = ShaderType::VERTEX;
+            }
+            else if (line.find("fragment") != std::string::npos) {
+                type = ShaderType::FRAGMENT;
+            }
+        }
+        else if(type != ShaderType::None) {
+            ss[(int)type] << line << std::endl;
+        }
+    }
+    return { ss[0].str(), ss[1].str()};
+}
+
+//编译着色器
+static unsigned int ComplieShader(unsigned int type, const std::string& source) {
+    unsigned int id = glCreateShader(type);
+    const char* src = source.c_str();
+    glShaderSource(id, 1, &src, nullptr);
+    glCompileShader(id);
+
+    // Todo: Errod handling
+    int result;
+    glGetShaderiv(id, GL_COMPILE_STATUS, &result);
+    if (result == GL_FALSE) {
+        int length;
+        glGetShaderiv(id, GL_INFO_LOG_LENGTH, &length);
+        char* message = (char*)_malloca(length * sizeof(char));
+        glGetShaderInfoLog(id, length, &length, message);
+        std::cout << "Failed to complie " << 
+            (type == GL_VERTEX_SHADER ? "vertex" : "fragment") << "shader!" << std::endl;
+        std::cout << message << std::endl;
+        glDeleteShader(id);
+        return 0;
+    } 
+    return id;
+}
+
+//创建着色器程序
+static int CreateShader(const std::string& vertexShader, const std::string& fragmentShader) {
+    unsigned int program = glCreateProgram();
+    unsigned int vs = ComplieShader(GL_VERTEX_SHADER, vertexShader);
+    unsigned int fs = ComplieShader(GL_FRAGMENT_SHADER, fragmentShader);
+
+    glAttachShader(program, vs);
+    glAttachShader(program, fs);
+
+    glLinkProgram(program);
+    glValidateProgram(program);
+
+    glDeleteShader(vs);
+    glDeleteShader(fs);
+
+    return program;
+}
+
+int main(void)
+{
+    GLFWwindow* window;
+
+    /* Initialize the library */
+    if (!glfwInit())
+        return -1;
+
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+ 
+
+    /* Create a windowed mode window and its OpenGL context */
+    window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+    if (!window)
+    {
+        glfwTerminate();
+        return -1;
+    }
+    
+    /* Make the window's context current */ 
+    glfwMakeContextCurrent(window);
+
+    //glew的初始化一定要放在已经glfw进行了初始化之后，也就是说有一个opengl完整的上下文
+    if (glewInit() != GLEW_OK) {
+        std::cout << "Error" << std::endl;
+    }
+    std::cout << glGetString(GL_VERSION) << std::endl;
+
+    float positions[] = {
+        -0.5f, -0.5f,
+         0.5f, -0.5f,
+         0.5f,  0.5f,
+        -0.5f,  0.5f,
+    };
+
+    unsigned int index[] = {
+        0, 1, 2,
+        2, 3, 0,
+    };
+
+    //定义一个vao缓冲区
+    unsigned int vao;
+    GLCall(glGenVertexArrays(1, &vao));
+    GLCall(glBindVertexArray(vao));
+
+    //定义一个vbo，里面设置顶点的具体数据
+    unsigned int vertex_buffer;
+    GLCall(glGenBuffers(1, &vertex_buffer));
+    GLCall(glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer));
+    GLCall(glBufferData(GL_ARRAY_BUFFER, sizeof(positions), positions, GL_STATIC_DRAW));
+
+    //设置属性索引0，这里将vao的属性0绑定到vbo上
+    GLCall(glEnableVertexAttribArray(0));
+    GLCall(glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), 0));
+
+    //设置一个ibo，用于存放索引
+    unsigned int index_buffer;
+    GLCall(glGenBuffers(1, &index_buffer));
+    GLCall(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, index_buffer));
+    GLCall(glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(index), index, GL_STATIC_DRAW));
+
+    //着色器程序
+    std::string file_path = "res/shaders/Basic.shader";
+    ShaderProgramSource source = ParseShader(file_path);
+    //std::cout << "Vertex: " << std::endl;
+    //std::cout << source.VertexSource << std::endl;
+    //std::cout << "Fragment: " << std::endl;  
+    //std::cout << source.FragmentSource << std::endl;
+    unsigned int shader = CreateShader(source.VertexSource, source.FragmentSource);
+    GLCall(glUseProgram(shader));
+    
+    //设置颜色
+	GLCall(int collocation = glGetUniformLocation(shader, "u_Color"));
+    ASSERT(collocation != -1);
+    GLCall(glUniform4f(collocation, 0.8f, 0.4f, 0.8f, 1.0f));
+    
+    //全部清空解绑
+    GLCall(glBindVertexArray(0));
+    GLCall(glUseProgram(0));
+    GLCall(glBindBuffer(GL_ARRAY_BUFFER, 0));
+    GLCall(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0));
+
+
+    float r = 0.0f;
+    float increment = 0.05f;
+
+    /* Loop until the user closes the window */
+    while (!glfwWindowShouldClose(window))
+    {
+        /* Render here */
+        GLCall(glClear(GL_COLOR_BUFFER_BIT)); \
+            
+        GLCall(glUseProgram(shader));
+        GLCall(glUniform4f(collocation, r, 0.4f, 0.8f, 1.0f));
+
+        GLCall(glBindVertexArray(vao));
+        GLCall(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, index_buffer));
+		GLCall(glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr));
+
+        if (r > 1.0f) {
+            increment = -0.05f;
+        }
+        else if (r < 0.0f) {
+            increment = 0.05f;
+        }
+
+        r += increment;
+
+        /* Swap front and back buffers */
+        glfwSwapBuffers(window);
+
+        /* Poll for and process events */
+        GLCall(glfwPollEvents());
+    }
+    GLCall(glDeleteProgram(shader));
+    glfwTerminate();
+    return 0;
+}
