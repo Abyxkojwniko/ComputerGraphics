@@ -11,10 +11,14 @@
             "id": "408f62df882e939c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "c++/cpplearn/cpplearnnote/30.原样转发与万能引用.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "30.原样转发与万能引用"
             }
           }
         ]
@@ -167,6 +171,7 @@
   },
   "active": "408f62df882e939c",
   "lastOpenFiles": [
+    "c++/cpplearn/cpplearnnote/31.单例及其演变.md",
     "c++/cpplearn/cpplearnpractice/32/main.exe",
     "c++/cpplearn/cpplearnpractice/32/sfinae.cpp",
     "c++/cpplearn/cpplearnpractice/32/sfinae.h",
@@ -183,7 +188,6 @@
     "game101/game101笔记/06 动画",
     "未命名",
     "start/output.png",
-    "c++/cpplearn/cpplearnpractice/29/unordermap.exe",
     "c++/cpplearn/cpplearnnote/25.手写双端队列.md",
     "c++/cpplearn/cpplearnnote/18.类的基本用法.md",
     "c++/cpplearn/cpplearnnote/19.继承与多态.md",
