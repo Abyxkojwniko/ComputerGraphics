@@ -13,7 +13,7 @@ int main(){
         std::cout << "s1 addr is" << SingleHungry::GetInst() << std::endl;
     });
 
-    std::thread t2([&](){
+    std::thread t2([&](){ 
         SingleHungry::GetInst();
         mtx.lock();
         std::cout << "s2 addr is" << SingleHungry::GetInst() << std::endl;
