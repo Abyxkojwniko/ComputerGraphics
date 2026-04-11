@@ -1,0 +1,12 @@
+﻿Type,Front,Back
+Basic,C++ 局部变量 (Local Variable) 的存储位置、生命周期及初始化特性是什么？,<ul><li><b>存储位置</b>：栈 (Stack)</li><li><b>生命周期</b>：函数/代码块结束时销毁</li><li><b>初始化</b>：默认不初始化（垃圾值/随机值），必须手动初始化</li></ul>
+Basic,C++ 静态局部变量 (Static Local Variable) 的核心特性有哪些？,<ul><li><b>存储</b>：数据段 (Data Segment)</li><li><b>生命周期</b>：贯穿整个程序运行期</li><li><b>初始化</b>：仅在第一次执行到声明处时初始化一次</li><li><b>作用域</b>：仅限定义它的函数内部</li></ul>
+Basic,在跨文件工程中，如何正确声明和使用全局变量？,1. 在 <b>.cpp</b> 中定义变量（如 <code>int g_val = 0;</code>）<br>2. 在 <b>.h</b> 头文件中使用 <code>extern int g_val;</code> 进行声明。<br>注意：应尽量使用命名空间封装以减少污染。
+Basic,为什么说 C++11 之后的静态局部变量是实现单例模式 (Meyers' Singleton) 的理想选择？,因为 C++11 标准保证了静态局部变量的初始化是<b>线程安全</b>的（由编译器内部加锁保证原子性），且具有延迟加载（Lazy Initialization）特性。
+Basic,全局变量的 'Static Initialization Order Fiasco' 风险是什么？,指不同翻译单元（.cpp文件）中全局变量的初始化顺序是未定义的。如果一个全局变量的初始化依赖另一个文件中的全局变量，可能导致访问到未初始化的内存。
+Cloze,局部变量分配在 {{c1::栈 (Stack)}} 上，而静态变量和全局变量分配在 {{c2::数据段 (Data Segment/Static Area)}}。,提示：栈区由编译器自动管理，数据段在程序加载时分配。
+Cloze,若想让全局变量仅在当前文件内可见，防止命名冲突，应使用 {{c1::static}} 关键字修饰，或将其放入 {{c2::匿名命名空间 (Anonymous Namespace)}}。,
+Cloze,局部变量如果未初始化，其值是 {{c1::未定义的 (Undefined/随机值)}}；而全局变量/静态变量默认初始化为 {{c2::0}}。,
+Basic,【代码预测】连续调用三次 <code>f()</code> 的输出结果是什么？<br><code>void f() { static int c = 10; std::cout << c++ << ' '; }</code>,<b>10 11 12</b><br>解释：变量 c 在数据段，函数返回后值被保留，下次调用从旧值开始递增。
+Basic,【找错】以下代码为什么是危险的？<br><code>int* get_data() { int val = 42; return &val; }</code>,<b>返回了局部变量的地址（Dangling Pointer）</b>。<br>val 是局部变量，存储在栈上，函数返回后该内存被释放，外部通过指针访问会导致未定义行为。
+Basic,【工程实践】如果需要一个全局可见但只读的配置常量，现代 C++ 的最佳写法是？,在头文件中使用 <code>inline constexpr int MaxConfig = 100;</code>。<br>优点：避免重复定义错误，支持编译期优化，无链接开销。

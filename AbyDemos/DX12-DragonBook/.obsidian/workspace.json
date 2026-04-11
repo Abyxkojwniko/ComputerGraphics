@@ -1,0 +1,230 @@
+{
+  "main": {
+    "id": "8ea7c3076570e5c2",
+    "type": "split",
+    "children": [
+      {
+        "id": "a7bba7e75b544de5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ce989e9a2217026b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "看书疑惑与解析.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "看书疑惑与解析"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "948123a5a99bee83",
+    "type": "split",
+    "children": [
+      {
+        "id": "71c74fd1b3c8e8dc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "310bca06e1af5919",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "de90666814eb9e5b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "4224e29169e1212e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "20964e3f5ce22fea",
+    "type": "split",
+    "children": [
+      {
+        "id": "c8f9cbde2263606a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "80d5933988cfc229",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "001 同步与命令记录.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "001 同步与命令记录 的反向链接列表"
+            }
+          },
+          {
+            "id": "4f30d99fa240dc6b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "001 同步与命令记录.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "001 同步与命令记录 的出链列表"
+            }
+          },
+          {
+            "id": "a2a11802e9a99bc7",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "83a7cb69376289b1",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "32e2367e0c9824d4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "001 同步与命令记录.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "001 同步与命令记录 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "floating": {
+    "id": "811280184e7b702c",
+    "type": "floating",
+    "children": [
+      {
+        "id": "b491c54df3206aab",
+        "type": "window",
+        "children": [
+          {
+            "id": "cb8eabbd615806d5",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "33700e7b47a4361c",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "14522790.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "14522790"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 0,
+        "y": -1080,
+        "width": 314,
+        "height": 283,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "ce989e9a2217026b",
+  "lastOpenFiles": [
+    "14522790.pdf",
+    "看书疑惑与解析.md",
+    "001 同步与命令记录.md",
+    "DX12龙书.pdf"
+  ]
+}
