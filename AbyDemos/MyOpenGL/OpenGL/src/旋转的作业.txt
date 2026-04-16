@@ -1,0 +1,29 @@
+		{
+			// 1. 每一帧都要重置单位矩阵
+			glm::mat4 trans1 = glm::mat4(1.0f);
+			// 2. 计算变换：先平移到右下角，再旋转（自转逻辑）
+			trans1 = glm::translate(trans1, glm::vec3(0.5f, -0.5f, 0.0f));
+			trans1 = glm::rotate(trans1, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
+			// 3. 上传矩阵给 Shader
+			shader.setUniform4mat("transform", trans1);
+			// 4. 执行 Draw Call（画第一个箱子）
+			glDrawElements(GL_TRIANGLES, ibo.GetCount(), GL_UNSIGNED_INT, nullptr);
+		}
+
+		{
+			// 1. 每一帧都要重置单位矩阵（使用全新的矩阵变量）
+			glm::mat4 trans2 = glm::mat4(1.0f);
+			// 2. 计算变换：先平移到左上角，再应用缩放
+			// 注意顺序：先平移，后缩放。这样缩放是在左上角那个点进行的（类似呼吸效果）
+			// 如果先缩放后平移，效果是一样的（因为是从原点出发）。这里我们选择先平移。
+			trans2 = glm::translate(trans2, glm::vec3(-0.5f, 0.5f, 0.0f)); // 窗口左上角
+			// 3. 计算缩放因子（呼吸灯效果）
+			// sin(time) 的范围是 [-1, 1]
+			// 让它变成 [0.5, 1.5] 的范围：先 +1 (变成[0,2])，再 /2 (变成[0,1])，最后 +0.5
+			float scaleAmount = (sin((float)glfwGetTime()) + 1.0f) / 2.0f + 0.5f;
+			trans2 = glm::scale(trans2, glm::vec3(scaleAmount, scaleAmount, 1.0f)); // 沿X,Y轴缩放，Z轴保持
+			// 4. 上传这个全新的矩阵给 Shader，覆盖刚才那个
+			shader.setUniform4mat("transform", trans2);
+			// 5. 再次执行 Draw Call（画第二个箱子）
+			glDrawElements(GL_TRIANGLES, ibo.GetCount(), GL_UNSIGNED_INT, nullptr);
+		}

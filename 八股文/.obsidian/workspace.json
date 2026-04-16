@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "侯杰c++/STL标准库与泛型编程/C++标准库 VS STL.md",
+                "file": "侯杰c++/面向对象开发/面向对象开发下.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "C++标准库 VS STL"
+              "title": "面向对象开发下"
             }
           },
           {
@@ -214,22 +214,22 @@
   },
   "active": "223abfb9f12a9b0f",
   "lastOpenFiles": [
+    "侯杰c++/面向对象开发/面向对象开发上.md",
+    "侯杰c++/STL标准库与泛型编程/01 C++标准库 VS STL.md",
+    "侯杰c++/STL标准库与泛型编程/02 容器与各种测试.md",
+    "侯杰c++/STL标准库与泛型编程/Pasted image 20260415113207.png",
+    "侯杰c++/STL标准库与泛型编程/Pasted image 20260415094952.png",
     "侯杰c++/STL标准库与泛型编程/Pasted image 20260409185905.png",
     "侯杰c++/STL标准库与泛型编程/Pasted image 20260409183559.png",
     "侯杰c++/STL标准库与泛型编程/Pasted image 20260409183342.png",
     "侯杰c++/STL标准库与泛型编程/Pasted image 20260409183244.png",
     "侯杰c++/STL标准库与泛型编程/Pasted image 20260409150354.png",
     "侯杰c++/面向对象开发/面向对象开发下.md",
-    "侯杰c++/STL标准库与泛型编程/C++标准库 VS STL.md",
     "real-time-rendering/002 笔记.md",
     "侯杰c++/STL标准库与泛型编程",
     "侯杰c++/面向对象开发/Pasted image 20260402184847.png",
     "侯杰c++/面向对象开发/Pasted image 20260402174626.png",
     "侯杰c++/面向对象开发/Pasted image 20260402174336.png",
-    "侯杰c++/面向对象开发/Pasted image 20260402172850.png",
-    "侯杰c++/面向对象开发/Pasted image 20260402172751.png",
-    "侯杰c++/面向对象开发/Pasted image 20260402172701.png",
-    "侯杰c++/面向对象开发/面向对象开发上.md",
     "侯杰c++/面向对象开发/002 参数传递与返回值.md",
     "计划.md",
     "real-time-rendering",
@@ -258,7 +258,6 @@
     "项目/TinyRenderer（1）.md",
     "项目/TinyRenderer（2）.md",
     "项目/TinyRenderer（3）.md",
-    "面试整理/004 引用的本质.md",
-    "面试整理/006 inline的作用.md"
+    "面试整理/004 引用的本质.md"
   ]
 }
