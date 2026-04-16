@@ -1,6 +1,0 @@
-﻿Front,Back
-C++ 局部变量 (Local Variable) 的存储位置、生命周期及初始化特性是什么？,<ul><li><b>存储位置</b>：栈 (Stack) [cite: 1]</li><li><b>生命周期</b>：随着函数的返回而结束 [cite: 1]</li><li><b>初始化</b>：如果不初始化，其值是随机的 [cite: 1]</li></ul>
-C++ 静态局部变量 (Static Local Variable) 的核心特性有哪些？,<ul><li><b>存储</b>：数据段 (Data Segment) [cite: 1]</li><li><b>初始化</b>：只能被初始化一次 [cite: 1]</li><li><b>特性</b>：每次调用都保持上一次调用结束时的值 [cite: 1]</li></ul>
-C++ 全局变量 (Global Variable) 的作用域和存储位置？,<ul><li><b>作用域</b>：程序中可以在任何地方访问 [cite: 1]</li><li><b>存储</b>：创建在数据区/数据段 [cite: 1]</li><li><b>跨文件使用</b>：需要用 extern 关键字声明 [cite: 1]</li></ul>
-在函数内部，如果局部变量和全局变量同名会发生什么？,优先使用局部变量，暂时“屏蔽”了同名的全局变量 [cite: 1]。
-【代码预测】连续调用两次 <code>counter()</code> 的输出？<br><code>void counter() { static int count = 0; count++; cout << count; }</code>,输出：1 和 2 [cite: 1]。<br>原因：静态局部变量 count 在数据段，不会随函数结束销毁，且只初始化一次 [cite: 1]。

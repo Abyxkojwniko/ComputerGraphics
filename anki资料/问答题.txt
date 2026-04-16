@@ -1,0 +1,167 @@
+C++::02_OOP::01_Overloading	C++ 函数重载的本质是什么？	编译器通过 Name Mangling 将同名函数转换为不同符号。
+C++::02_OOP::01_Overloading	为什么源码中同名函数可以共存？	因为编译后它们的内部符号不同。
+C++::02_OOP::01_Overloading	构造函数为什么容易发生重载？	因为函数名固定，只能通过参数区分。
+C++::02_OOP::01_Overloading	构造函数默认参数为什么危险？	可能导致调用时产生二义性。
+C++::02_OOP::06_Operator	this 指针是什么？	编译器为成员函数隐式添加的指针，指向调用该函数的对象。
+C++::02_OOP::06_Operator	this 指针由谁决定？	由调用该函数的对象决定。
+C++::02_OOP::06_Operator	成员函数调用的本质是什么？	传入 this 指针的函数调用。
+C++::02_OOP::06_Operator	cout 为什么能连续输出？	因为 operator<< 返回 ostream&。
+C++::02_OOP::06_Operator	cout 的本质是什么？	基于 ostream 的操作符重载实现输出。
+C++::02_OOP::03_Passing	为什么推荐引用传递？	减少拷贝，提高效率。
+C++::02_OOP::03_Passing	什么时候可以使用值传递？	数据量很小（如 int）。
+C++::02_OOP::03_Passing	引用的本质是什么？	被隐藏的指针。
+C++::02_OOP::03_Passing	引用相比指针的特点是什么？	语法更简单，但必须初始化且不可改变绑定。
+C++::02_OOP::03_Passing	为什么不能返回局部对象引用？	生命周期结束，产生悬垂引用。
+C++::02_OOP::02_ConstStatic	const 成员函数的作用是什么？	保证不会修改对象数据。
+C++::02_OOP::02_ConstStatic	为什么 getter 必须加 const？	否则 const 对象无法调用。
+C++::02_OOP::02_ConstStatic	const 引用的作用是什么？	防止函数修改外部数据。
+C++::02_OOP::02_ConstStatic	const 为什么可以用于重载？	因为 this 指针类型不同。
+C++::02_OOP::02_ConstStatic	static 成员函数的特点是什么？	没有 this 指针。
+C++::02_OOP::02_ConstStatic	static 函数为什么不能访问普通成员？	因为没有 this 指针。
+C++::02_OOP::02_ConstStatic	static 在单例中的作用是什么？	保证唯一实例并实现延迟创建。
+C++::02_OOP::04_Friend	同类对象之间是否可以访问 private？	可以。
+C++::02_OOP::04_Friend	为什么同类对象可以访问 private？	成员函数可以访问所有同类对象的私有成员。
+C++::02_OOP::04_Friend	friend 的作用是什么？	打破封装访问私有成员。
+C++::01_Basic::Namespace	namespace 的作用是什么？	避免命名冲突。
+C++::01_Basic::Namespace	如何使用命名空间？	通过 :: 或 using。
+C++::01_Basic::Modern	auto 的作用是什么？	自动类型推导。
+C++::01_Basic::Modern	range-based for 的作用是什么？	简化容器遍历。
+C++::03_Memory::01_CopyControl	什么是浅拷贝？	只复制指针值，使多个对象指向同一块内存。
+C++::03_Memory::01_CopyControl	浅拷贝有什么问题？	会导致多个对象共享同一内存，容易产生野指针或重复释放。
+C++::03_Memory::01_CopyControl	什么是深拷贝？	重新分配内存并复制数据，使对象独立。
+C++::03_Memory::01_CopyControl	什么时候必须实现深拷贝？	类中包含指针成员时。
+C++::03_Memory::01_CopyControl	什么是 The Big Three？	拷贝构造、拷贝赋值、析构函数。
+C++::03_Memory::01_CopyControl	拷贝赋值的标准流程是什么？	先检查自赋值 → 释放旧资源 → 分配新资源 → 拷贝数据。
+C++::03_Memory::01_CopyControl	为什么要检查自赋值？	避免释放自身数据导致错误。
+C++::03_Memory::01_CopyControl	什么是隐式类型转换构造函数？	单参数构造函数允许自动类型转换。
+C++::03_Memory::01_CopyControl	explicit 的作用是什么？	禁止隐式转换。
+C++::03_Memory::01_CopyControl	为什么要使用 explicit？	避免意外隐式转换导致歧义或错误。
+C++::03_Memory::02_StackHeap	栈对象的生命周期由什么控制？	作用域。
+C++::03_Memory::02_StackHeap	栈对象如何释放？	自动调用析构函数。
+C++::03_Memory::02_StackHeap	堆对象如何创建？	通过 new 分配。
+C++::03_Memory::02_StackHeap	堆对象如何释放？	必须手动 delete。
+C++::03_Memory::02_StackHeap	堆对象如果不释放会怎样？	产生内存泄漏。
+C++::03_Memory::03_NewDelete	new 表达式的第一步是什么？	调用 operator new 分配内存。
+C++::03_Memory::03_NewDelete	new 表达式第二步是什么？	检查分配失败（可能抛出 bad_alloc）。
+C++::03_Memory::03_NewDelete	new 表达式第三步是什么？	调用构造函数。
+C++::03_Memory::03_NewDelete	delete 的执行顺序是什么？	先调用析构函数，再释放内存。
+
+C++::03_Memory::03_NewDelete	operator new 本质是什么？	封装 malloc。
+C++::03_Memory::03_NewDelete	为什么重载 operator new 不能再调用 new？	会导致递归调用。
+C++::03_Memory::03_NewDelete	如何绕过类内 new 重载？	使用 ::new。
+C++::03_Memory::04_ArrayMemory	什么是 Cookie？	记录数组大小或元素个数的隐藏信息。
+C++::03_Memory::04_ArrayMemory	delete[] 为什么需要 Cookie？	确定需要调用多少次析构函数。
+C++::03_Memory::04_ArrayMemory	new[] 和 delete[] 为什么必须配对？	否则无法正确析构对象。
+C++::03_Memory::04_ArrayMemory	错误使用 delete 会导致什么？	Heap Corruption（堆破坏）。
+C++::03_Memory::04_ArrayMemory	delete 和 delete[] 的核心区别是什么？	是否处理数组元素数量。
+C++::03_Memory::05_ExceptionSafety	为什么需要 placement delete？	防止构造函数异常导致内存泄漏。
+C++::03_Memory::05_ExceptionSafety	new 过程中什么时候会触发回滚？	构造函数抛出异常时。
+C++::03_Memory::05_ExceptionSafety	placement delete 的作用是什么？	释放已分配但未成功构造的内存。
+C++::03_Memory::05_ExceptionSafety	如果缺少对应 delete 会怎样？	导致内存泄漏。
+C++::02_OOP::07_Relationships	什么是复合（Composition）？	一种“拥有”关系，一个对象包含另一个对象。
+C++::02_OOP::07_Relationships	复合关系的本质是什么？	功能由内部组件实现。
+C++::02_OOP::07_Relationships	复合的构造顺序是什么？	先 component，再 container。
+C++::02_OOP::07_Relationships	复合的析构顺序是什么？	先 container，再 component。
+C++::02_OOP::07_Relationships	什么是委托（Delegation）？	通过指针引用另一个对象实现功能。
+C++::02_OOP::07_Relationships	委托的特点是什么？	松耦合的“虚拥有”关系。
+C++::02_OOP::07_Relationships	委托常用于什么场景？	写时复制（Copy on Write）。
+C++::02_OOP::07_Relationships	什么是继承（Inheritance）？	子类继承父类属性和行为。
+C++::02_OOP::07_Relationships	为什么基类析构函数必须是 virtual？	否则通过基类指针删除子类对象会导致内存泄漏。
+C++::02_OOP::07_Relationships	继承的构造顺序是什么？	先 base，再 derive。
+C++::02_OOP::07_Relationships	继承的析构顺序是什么？	先 derive，再 base。
+C++::02_OOP::07_Relationships	继承 + 复合时的构造顺序是什么？	先 base → 再 component → 最后 derive。
+C++::02_OOP::07_Relationships	继承 + 复合时的析构顺序是什么？	先 derive → 再 component → 最后 base。
+C++::04_DesignPattern::Observer	观察者模式的核心结构是什么？	Subject + 多个 Observer。
+C++::04_DesignPattern::Observer	Observer 模式依赖什么关系？	继承 + 委托。
+C++::04_DesignPattern::Observer	为什么 Observer 需要继承同一基类？	实现统一接口，便于管理。
+C++::04_DesignPattern::Observer	Subject 的作用是什么？	维护观察者列表并通知更新。
+C++::04_DesignPattern::Composite	组合模式的作用是什么？	处理树形结构（如文件系统）。
+C++::04_DesignPattern::Composite	Composite 模式的核心思想是什么？	统一对待容器和叶子节点。
+C++::04_DesignPattern::Composite	为什么父类不能把所有操作设为纯虚函数？	因为叶子节点不具备容器功能。
+C++::04_DesignPattern::Composite	Composite 模式的关键好处是什么？	客户端可以统一处理单个对象和组合对象。
+C++::04_DesignPattern::Prototype	原型模式的核心问题是什么？	如何让父类处理未来子类对象。
+C++::04_DesignPattern::Prototype	原型模式的核心思想是什么？	让对象自己复制自己。
+C++::04_DesignPattern::Prototype	原型模式如何实现？	子类提供自身原型并注册到父类。
+C++::04_DesignPattern::Prototype	为什么使用原型模式？	避免依赖具体子类类型。
+C++::05_ObjectModel::01_MemoryLayout	派生类对象在内存中的结构是什么？	包含完整的基类部分 + 派生类自身成员。
+C++::05_ObjectModel::01_MemoryLayout	基类指针访问派生类对象的本质是什么？	只能看到基类部分，但派生类内存仍存在。
+C++::05_ObjectModel::01_MemoryLayout	单继承中派生类和基类地址关系是什么？	起始地址相同。
+C++::05_ObjectModel::01_MemoryLayout	为什么会出现成员偏移（+8/+16）？	因为 vptr 和内存对齐（padding）。
+C++::05_ObjectModel::01_MemoryLayout	vptr 一般存放在什么位置？	对象内存起始位置（offset 0）。
+C++::05_ObjectModel::01_MemoryLayout	成员变量的位置由什么决定？	类声明顺序（编译期决定）。
+C++::05_ObjectModel::01_MemoryLayout	构造顺序由什么决定？	继承和组合关系（运行期顺序）。
+C++::05_ObjectModel::02_VirtualTable	什么是 vptr？	指向虚函数表的指针。
+C++::05_ObjectModel::02_VirtualTable	什么是 vtbl？	存储虚函数地址的表。
+C++::05_ObjectModel::02_VirtualTable	vtbl 存储在哪里？	只读数据区（.rodata）。
+C++::05_ObjectModel::02_VirtualTable	子类继承虚函数表时发生什么？	拷贝父类 vtbl。
+C++::05_ObjectModel::02_VirtualTable	子类 override 时发生什么？	替换 vtbl 中对应函数地址。
+C++::05_ObjectModel::02_VirtualTable	多态调用的本质是什么？	通过 vptr 查表调用函数。
+C++::05_ObjectModel::02_VirtualTable	为什么 nullptr 调用虚函数会崩溃？	因为访问地址 0 获取 vptr。
+C++::05_ObjectModel::03_Polymorphism	什么是对象切片（Object Slicing）？	用值赋值创建基类对象，丢失派生类部分。
+C++::05_ObjectModel::03_Polymorphism	为什么对象切片会导致多态失效？	新对象的 vptr 指向基类 vtbl。
+C++::05_ObjectModel::03_Polymorphism	指针/引用为什么可以保持多态？	仍然指向原始对象。
+C++::05_ObjectModel::03_Polymorphism	构造函数中为什么没有多态？	vptr 尚未指向子类。
+C++::05_ObjectModel::03_Polymorphism	析构函数为什么必须是 virtual？	确保子类资源被正确释放。
+C++::05_ObjectModel::03_Polymorphism	delete 多态对象的执行顺序是什么？	先子类析构，再父类析构。
+C++::05_ObjectModel::04_ThisPointer	this 指针的本质是什么？	成员函数的隐藏参数，指向当前对象。
+C++::05_ObjectModel::04_ThisPointer	this 指针的作用是什么？	让函数知道操作哪个对象。
+C++::05_ObjectModel::04_ThisPointer	成员函数调用的本质是什么？	传入对象地址的函数调用。
+C++::05_ObjectModel::04_ThisPointer	const 成员函数的 this 类型是什么？	const T* const。
+C++::05_ObjectModel::04_ThisPointer	为什么 const 可以用于函数重载？	this 指针类型不同。
+C++::06_Template::01_Basics	什么是类模板？	将类型参数化，由用户显式指定类型。
+C++::06_Template::01_Basics	什么是函数模板？	通过参数推导自动确定类型。
+C++::06_Template::01_Basics	函数模板为什么通常不用显式指定类型？	编译器会进行类型推导。
+C++::06_Template::01_Basics	什么是成员模板？	定义在类模板中的模板函数或类。
+C++::06_Template::01_Basics	成员模板的核心作用是什么？	允许内部类型继续变化。
+C++::06_Template::01_Basics	为什么 shared_ptr 可以接受 Derived* 初始化 Base 类型？	通过成员模板支持向上转型。
+C++::06_Template::01_Basics	shared_ptr 如何正确析构子类对象？	保存专属 deleter（类型擦除）。
+C++::06_Template::01_Basics	什么是类型擦除（Type Erasure）？	隐藏具体类型但保留行为（如 deleter）。
+C++::06_Template::02_Specialization	什么是模板泛化？	通用模板实现。
+C++::06_Template::02_Specialization	什么是模板特化？	针对特定类型提供专门实现。
+C++::06_Template::02_Specialization	编译器匹配模板的优先级是什么？	优先匹配最特化版本。
+C++::06_Template::02_Specialization	什么是全特化？	完全指定模板参数。
+C++::06_Template::02_Specialization	什么是偏特化？	部分指定模板参数。
+C++::06_Template::02_Specialization	什么是个数偏特化？	只绑定部分模板参数。
+C++::06_Template::02_Specialization	什么是范围偏特化？	限制类型形态（如 T*）。
+C++::06_Template::03_TemplateTemplate	什么是模板模板参数？	将类模板作为参数传入模板。
+C++::06_Template::03_TemplateTemplate	模板模板参数的本质是什么？	传入“类型生成器”而不是类型。
+C++::06_Template::03_TemplateTemplate	模板模板参数的语法特点是什么？	template <typename, template<typename> class C>
+C++::06_Template::03_TemplateTemplate	为什么 C++17 之前必须用 class？	语言规范限制。
+C++::06_Template::03_TemplateTemplate	编译器检查模板模板参数时看什么？	只看参数个数（签名）。
+C++::06_Template::03_TemplateTemplate	为什么 std::list 不能直接传入单参数模板？	因为它有两个模板参数。
+C++::06_Template::03_TemplateTemplate	如何解决模板参数不匹配问题？	使用 using 适配模板。
+C++::06_Template::03_TemplateTemplate	using 的作用是什么？	固定部分参数，重塑模板签名。
+C++::06_Template::04_TemplateHierarchy	模板参数中的“类型”是什么级别？	一等兵（Type）。
+C++::06_Template::04_TemplateHierarchy	类模板属于什么级别？	二等兵（Class Template）。
+C++::06_Template::04_TemplateHierarchy	什么是变长模板？	可接受任意数量参数的模板。
+C++::06_Template::04_TemplateHierarchy	变长模板属于什么级别？	三等兵（Variadic Template）。
+C++::06_Template::04_TemplateHierarchy	为什么模板参数不能混用？	因为编译器区分不同层级。
+C++::07_STL::01_PointerLike	什么是仿指针类？	通过操作符重载使对象表现得像指针。
+C++::07_STL::01_PointerLike	仿指针类必须重载哪些操作符？	* 和 ->。
+C++::07_STL::01_PointerLike	operator-> 有什么特殊规则？	必须最终返回原生指针。
+C++::07_STL::01_PointerLike	operator-> 为什么会递归调用？	直到返回原生指针为止。
+C++::07_STL::01_PointerLike	什么是迭代器？	用于遍历容器的仿指针对象。
+C++::07_STL::01_PointerLike	迭代器与普通指针的区别是什么？	内部包含数据结构遍历逻辑。
+C++::07_STL::01_PointerLike	shared_ptr 为什么可以安全删除派生类对象？	保存了派生类专属 deleter。
+C++::07_STL::01_PointerLike	shared_ptr 的 deleter 存在哪里？	控制块（control block）。
+C++::07_STL::01_PointerLike	类型擦除在智能指针中的作用是什么？	隐藏具体类型但保留删除行为。
+C++::07_STL::02_Functor	什么是仿函数？	重载 operator() 的类对象。
+C++::07_STL::02_Functor	仿函数的本质是什么？	把行为封装为类型。
+C++::07_STL::02_Functor	operator() 的作用是什么？	让对象像函数一样调用。
+C++::07_STL::02_Functor	为什么仿函数常用 struct？	默认 public，方便调用。
+C++::07_STL::02_Functor	STL 仿函数为什么常继承基类？	用于类型声明或 traits 提取。
+C++::07_STL::02_Functor	仿函数为什么常加 const？	保证无状态（stateless）。
+C++::07_STL::02_Functor	为什么参数用 const 引用？	防止修改原数据。
+C++::07_STL::03_DesignPhilosophy	STL 的核心设计思想是什么？	数据与算法解耦。
+C++::07_STL::03_DesignPhilosophy	pair 的设计特点是什么？	只负责存储，不包含行为。
+C++::07_STL::03_DesignPhilosophy	identity 的作用是什么？	返回元素自身。
+C++::07_STL::03_DesignPhilosophy	select1st 的作用是什么？	提取 pair 的 first。
+C++::07_STL::03_DesignPhilosophy	select2nd 的作用是什么？	提取 pair 的 second。
+C++::07_STL::03_DesignPhilosophy	为什么要使用提取器（extractor）？	实现算法与数据结构解耦。
+C++::07_STL::03_DesignPhilosophy	什么是 decoupling？	数据与行为分离。
+C++::07_STL::03_DesignPhilosophy	STL 为什么强调解耦？	提高通用性与复用性。
+C++::07_STL::03_DesignPhilosophy	为什么需要 typename？	告诉编译器某个名字是类型。
+C++::07_STL::03_DesignPhilosophy	什么时候必须使用 typename？	访问模板参数中的嵌套类型时。
+C++::07_STL::03_DesignPhilosophy	如果不写 typename 会怎样？	编译器无法解析类型，报错。
+
+

@@ -1,0 +1,90 @@
+C++::02_OOP::01_Overloading	函数重载依赖 {{c1::Name Mangling}}。
+C++::02_OOP::01_Overloading	重载函数在底层是 {{c1::不同符号}}。
+C++::02_OOP::01_Overloading	默认参数可能导致 {{c1::二义性}}。
+C++::02_OOP::06_Operator	this 指针指向 {{c1::调用该函数的对象}}。
+C++::02_OOP::06_Operator	成员函数本质是 {{c1::带 this 参数的函数}}。
+C++::02_OOP::06_Operator	链式输出依赖 {{c1::返回引用}}。
+C++::02_OOP::03_Passing	引用本质是 {{c1::指针}}。
+C++::02_OOP::03_Passing	引用必须 {{c1::初始化}}。
+C++::02_OOP::03_Passing	引用不能 {{c1::重新绑定}}。
+C++::02_OOP::03_Passing	返回局部引用会导致 {{c1::悬垂引用}}。
+C++::02_OOP::02_ConstStatic	const 是一种 {{c1::只读约束}}。
+C++::02_OOP::02_ConstStatic	const 引用用于 {{c1::防止修改}}。
+C++::02_OOP::02_ConstStatic	static 函数没有 {{c1::this 指针}}。
+C++::02_OOP::04_Friend	同类对象可以访问 {{c1::彼此 private 成员}}。
+C++::01_Basic::Namespace	namespace 用于 {{c1::避免命名冲突}}。
+C++::01_Basic::Modern	auto 用于 {{c1::类型推导}}。
+C++::01_Basic::Modern	range-based for 用于 {{c1::遍历容器}}。
+C++::03_Memory::01_CopyControl	浅拷贝复制的是 {{c1::指针值}}。
+C++::03_Memory::01_CopyControl	深拷贝需要 {{c1::重新分配内存}}。
+C++::03_Memory::01_CopyControl	带指针类必须实现 {{c1::深拷贝}}。
+C++::03_Memory::01_CopyControl	explicit 用于 {{c1::禁止隐式转换}}。
+C++::03_Memory::02_StackHeap	栈对象生命周期由 {{c1::作用域}} 控制。
+C++::03_Memory::02_StackHeap	堆内存必须 {{c1::手动释放}}。
+C++::03_Memory::03_NewDelete	new 的第一步是 {{c1::分配内存}}。
+C++::03_Memory::03_NewDelete	new 的最后一步是 {{c1::调用构造函数}}。
+C++::03_Memory::03_NewDelete	delete 先执行 {{c1::析构函数}}。
+C++::03_Memory::04_ArrayMemory	Cookie 用于记录 {{c1::数组大小}}。
+C++::03_Memory::04_ArrayMemory	delete[] 会调用 {{c1::多次析构}}。
+C++::03_Memory::04_ArrayMemory	new[] 必须配对 {{c1::delete[]}}。
+C++::03_Memory::05_ExceptionSafety	构造函数异常会触发 {{c1::内存回滚}}。
+C++::03_Memory::05_ExceptionSafety	placement delete 用于 {{c1::异常清理}}。
+C++::03_Memory::05_ExceptionSafety	缺少匹配 delete 会导致 {{c1::内存泄漏}}。
+C++::02_OOP::07_Relationships	复合构造顺序是 {{c1::先内后外}}。
+C++::02_OOP::07_Relationships	复合析构顺序是 {{c1::先外后内}}。
+C++::02_OOP::07_Relationships	继承构造顺序是 {{c1::先 base 后 derive}}。
+C++::02_OOP::07_Relationships	继承析构顺序是 {{c1::先 derive 后 base}}。
+C++::02_OOP::07_Relationships	基类析构必须是 {{c1::virtual}}。
+C++::02_OOP::07_Relationships	构造顺序：{{c1::base → component → derive}}。
+C++::02_OOP::07_Relationships	析构顺序：{{c1::derive → component → base}}。
+C++::04_DesignPattern::Observer	Observer 通过 {{c1::继承}} 实现统一接口。
+C++::04_DesignPattern::Observer	Subject 使用 {{c1::容器管理 Observer}}。
+C++::04_DesignPattern::Composite	Composite 用于 {{c1::树形结构}}。
+C++::04_DesignPattern::Composite	容器和叶子共享 {{c1::同一接口}}。
+C++::04_DesignPattern::Prototype	Prototype 通过 {{c1::自我复制}} 创建对象。
+C++::04_DesignPattern::Prototype	子类通过 {{c1::注册原型}} 被父类管理。
+C++::05_ObjectModel::01_MemoryLayout	vptr 位于 {{c1::对象起始位置}}。
+C++::05_ObjectModel::01_MemoryLayout	内存布局由 {{c1::声明顺序}} 决定。
+C++::05_ObjectModel::01_MemoryLayout	构造顺序由 {{c1::继承关系}} 决定。
+C++::05_ObjectModel::01_MemoryLayout	派生类对象包含 {{c1::完整基类部分}}。
+C++::05_ObjectModel::01_MemoryLayout	vptr 位于 {{c1::对象起始位置}}。
+C++::05_ObjectModel::01_MemoryLayout	内存布局由 {{c1::声明顺序}} 决定。
+C++::05_ObjectModel::01_MemoryLayout	构造顺序由 {{c1::继承关系}} 决定。
+C++::05_ObjectModel::01_MemoryLayout	派生类对象包含 {{c1::完整基类部分}}。
+C++::05_ObjectModel::02_VirtualTable	vptr 指向 {{c1::虚函数表}}。
+C++::05_ObjectModel::02_VirtualTable	vtbl 存储 {{c1::函数地址}}。
+C++::05_ObjectModel::02_VirtualTable	override 本质是 {{c1::替换函数地址}}。
+C++::05_ObjectModel::02_VirtualTable	多态调用本质是 {{c1::查表调用}}。
+C++::05_ObjectModel::03_Polymorphism	对象切片会导致 {{c1::多态失效}}。
+C++::05_ObjectModel::03_Polymorphism	多态依赖 {{c1::指针或引用}}。
+C++::05_ObjectModel::03_Polymorphism	构造函数 {{c1::没有多态}}。
+C++::05_ObjectModel::03_Polymorphism	析构函数必须 {{c1::virtual}}。
+C++::05_ObjectModel::04_ThisPointer	this 是 {{c1::隐藏参数}}。
+C++::05_ObjectModel::04_ThisPointer	this 指向 {{c1::当前对象}}。
+C++::05_ObjectModel::04_ThisPointer	const 改变的是 {{c1::this 类型}}。
+C++::06_Template::01_Basics	函数模板依赖 {{c1::类型推导}}。
+C++::06_Template::01_Basics	成员模板允许 {{c1::内部类型变化}}。
+C++::06_Template::01_Basics	shared_ptr 依赖 {{c1::成员模板}} 实现向上转型。
+C++::06_Template::01_Basics	类型擦除用于 {{c1::隐藏类型实现}}。
+C++::06_Template::02_Specialization	模板匹配优先 {{c1::特化版本}}。
+C++::06_Template::02_Specialization	偏特化用于 {{c1::部分绑定}}。
+C++::06_Template::02_Specialization	T* 是 {{c1::范围偏特化}}。
+C++::06_Template::03_TemplateTemplate	模板模板参数传递的是 {{c1::模板}}。
+C++::06_Template::03_TemplateTemplate	编译器只检查 {{c1::参数个数}}。
+C++::06_Template::03_TemplateTemplate	using 用于 {{c1::适配模板}}。
+C++::06_Template::04_TemplateHierarchy	int 属于 {{c1::类型}}。
+C++::06_Template::04_TemplateHierarchy	vector 属于 {{c1::类模板}}。
+C++::06_Template::04_TemplateHierarchy	tuple 属于 {{c1::变长模板}}。
+C++::07_STL::01_PointerLike	operator-> 必须返回 {{c1::原生指针}}。
+C++::07_STL::01_PointerLike	operator-> 会 {{c1::递归调用}}。
+C++::07_STL::01_PointerLike	迭代器是 {{c1::仿指针}}。
+C++::07_STL::01_PointerLike	shared_ptr 依赖 {{c1::deleter}}。
+C++::07_STL::01_PointerLike	类型擦除用于 {{c1::隐藏类型}}。
+C++::07_STL::02_Functor	仿函数依赖 {{c1::operator()}}。
+C++::07_STL::02_Functor	仿函数本质是 {{c1::函数对象}}。
+C++::07_STL::02_Functor	const 保证 {{c1::无状态}}。
+C++::07_STL::03_DesignPhilosophy	STL 核心是 {{c1::解耦}}。
+C++::07_STL::03_DesignPhilosophy	pair 只负责 {{c1::存储}}。
+C++::07_STL::03_DesignPhilosophy	select1st 用于 {{c1::提取 key}}。
+C++::07_STL::03_DesignPhilosophy	typename 用于 {{c1::声明类型}}。
+C++::07_STL::03_DesignPhilosophy	typename 解决 {{c1::编译期歧义}}。
