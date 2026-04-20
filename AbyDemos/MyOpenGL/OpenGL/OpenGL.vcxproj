@@ -139,8 +139,10 @@
     <ClCompile Include="src\Texture.h" />
     <ClCompile Include="src\VertexBuffer.cpp" />
     <ClCompile Include="src\VertexArray.cpp" />
+    <ClCompile Include="src\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Camera.h" />
     <ClInclude Include="src\IndexBuffer.h" />
     <ClInclude Include="src\Shader.h" />
     <ClInclude Include="src\stb.h" />
@@ -154,6 +156,7 @@
     <Text Include="shaders\fragmentshader.fs" />
     <Text Include="shaders\作业1.fs" />
     <Text Include="shaders\作业2.fs" />
+    <Text Include="src\摄像机的作业.txt" />
     <Text Include="src\旋转的作业.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -22,31 +22,17 @@
             }
           },
           {
-            "id": "223abfb9f12a9b0f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "侯杰c++/面向对象开发/面向对象开发下.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "面向对象开发下"
-            }
-          },
-          {
             "id": "381f98615485d85b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "侯杰c++/面向对象开发/面向对象开发下.md",
+                "file": "侯杰c++/STL标准库与泛型编程/04 OOP vs GP.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "面向对象开发下"
+              "title": "04 OOP vs GP"
             }
           }
         ],
@@ -212,37 +198,42 @@
       "bases:新建数据库": false
     }
   },
-  "active": "223abfb9f12a9b0f",
+  "active": "381f98615485d85b",
   "lastOpenFiles": [
+    "侯杰c++/STL标准库与泛型编程/Pasted image 20260420101920.png",
+    "侯杰c++/STL标准库与泛型编程/Pasted image 20260420101156.png",
+    "侯杰c++/STL标准库与泛型编程/Pasted image 20260420100617.png",
+    "侯杰c++/STL标准库与泛型编程/03 分配器.md",
+    "侯杰c++/STL标准库与泛型编程/04 OOP vs GP.md",
+    "侯杰c++/STL标准库与泛型编程/Pasted image 20260420080439.png",
+    "侯杰c++/STL标准库与泛型编程/Pasted image 20260420080248.png",
+    "侯杰c++/STL标准库与泛型编程/Pasted image 20260420075302.png",
+    "侯杰c++/STL标准库与泛型编程/02 容器与各种测试.md",
+    "侯杰c++/STL标准库与泛型编程/Pasted image 20260417123017.png",
+    "侯杰c++/STL标准库与泛型编程/Pasted image 20260417121856.png",
+    "侯杰c++/STL标准库与泛型编程/Pasted image 20260417121131.png",
+    "侯杰c++/STL标准库与泛型编程/Pasted image 20260417105929.png",
+    "侯杰c++/STL标准库与泛型编程/Pasted image 20260417103110.png",
+    "面试整理/TinyRenderer（3）.md",
+    "面试整理/Opengl & Ray Tracing.md",
+    "面试整理/网易面试.md",
+    "面试整理/006 inline的作用.md",
+    "面试整理/004 引用的本质.md",
+    "面试整理/003 C++面向对象核心（虚函数）.md",
+    "面试整理/002 const的用法.md",
+    "面试整理/001 c++内存分区和堆栈区别.md",
+    "侯杰c++/面向对象开发/面向对象开发下.md",
     "侯杰c++/面向对象开发/面向对象开发上.md",
     "侯杰c++/STL标准库与泛型编程/01 C++标准库 VS STL.md",
-    "侯杰c++/STL标准库与泛型编程/02 容器与各种测试.md",
-    "侯杰c++/STL标准库与泛型编程/Pasted image 20260415113207.png",
-    "侯杰c++/STL标准库与泛型编程/Pasted image 20260415094952.png",
-    "侯杰c++/STL标准库与泛型编程/Pasted image 20260409185905.png",
-    "侯杰c++/STL标准库与泛型编程/Pasted image 20260409183559.png",
-    "侯杰c++/STL标准库与泛型编程/Pasted image 20260409183342.png",
-    "侯杰c++/STL标准库与泛型编程/Pasted image 20260409183244.png",
-    "侯杰c++/STL标准库与泛型编程/Pasted image 20260409150354.png",
-    "侯杰c++/面向对象开发/面向对象开发下.md",
     "real-time-rendering/002 笔记.md",
     "侯杰c++/STL标准库与泛型编程",
-    "侯杰c++/面向对象开发/Pasted image 20260402184847.png",
-    "侯杰c++/面向对象开发/Pasted image 20260402174626.png",
-    "侯杰c++/面向对象开发/Pasted image 20260402174336.png",
     "侯杰c++/面向对象开发/002 参数传递与返回值.md",
     "计划.md",
     "real-time-rendering",
     "侯杰c++/面向对象开发/001 头文件与类的声明.md",
     "侯杰c++/面向对象开发",
     "侯杰c++",
-    "面试整理/001 c++内存分区和堆栈区别.md",
-    "面试整理/TinyRenderer（3）.md",
-    "面试整理/003 C++面向对象核心（虚函数）.md",
-    "面试整理/Opengl & Ray Tracing.md",
-    "面试整理/网易面试.md",
     "面试整理/005 static的三种用法与底层.md",
-    "面试整理/002 const的用法.md",
     "卡码笔记/001 静态局部变量，全局变量，局部变量的特点，以及使用场景.md",
     "卡码笔记/001 静态局部变量，全局变量，局部变量的特点，以及使用场景.md",
     "测试.md",
@@ -254,10 +245,6 @@
     "卡码笔记/静态局部变量，全局变量，局部变量的特点，以及使用场景/核心概念.md",
     "卡码笔记/静态局部变量，全局变量，局部变量的特点，以及使用场景/未命名.base",
     "未命名 1",
-    "项目/笔试题.md",
-    "项目/TinyRenderer（1）.md",
-    "项目/TinyRenderer（2）.md",
-    "项目/TinyRenderer（3）.md",
-    "面试整理/004 引用的本质.md"
+    "项目/笔试题.md"
   ]
 }

@@ -9,13 +9,18 @@
 #include <glm.hpp>
 #include <gtc/matrix_transform.hpp>
 #include <gtc/type_ptr.hpp>
+#include "Camera.h"
 
 const float screenWidth = 800.0f;
 const float screenHeight = 600.0f;
 
+
+
 int main() {
 	
 	Window window(screenWidth, screenHeight, "LearnOpenGL");
+	Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
+	window.SetCamera(&camera);
 
 	//float vertices[] = {
 	//	//     ---- 位置 ----       ---- 颜色 ----     - 纹理坐标 -
@@ -87,14 +92,9 @@ int main() {
 		glm::vec3(1.5f,  0.2f, -1.5f),
 		glm::vec3(-1.3f,  1.0f, -1.5f)
 	};
-	
-	glm::mat4 view = glm::mat4(1.0f);
-	// 注意，我们将矩阵向我们要进行移动场景的反方向移动。
-	view = glm::translate(view, glm::vec3(0.0f, -3.0f, -5.0f));
-	glm::mat4 projection = glm::mat4(1.0f);
-	projection = glm::perspective(glm::radians(90.0f), screenWidth / screenHeight, 0.1f, 100.0f);
 
-	float mixValue = 0.2f;
+	float deltaTime = 0.0f;
+	float lastFrame = 0.0f;
 
 	VertexBuffer vbo(vertices, sizeof(vertices));
 	IndexBuffer ibo(indices, sizeof(indices) / sizeof(unsigned int));
@@ -125,6 +125,10 @@ int main() {
 	while (!window.shouldClose()) {
 		//auto frameStartTime = std::chrono::high_resolution_clock::now();
 		//window.MakeCurrent();
+		float currentFrame = glfwGetTime();
+		deltaTime = currentFrame - lastFrame;
+		lastFrame = currentFrame;
+
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		glEnable(GL_DEPTH_TEST);
@@ -134,24 +138,27 @@ int main() {
 		shader.Bind();
 		vao.Bind();
 
-		//MVP矩阵
+		//MVP
+		glm::mat4 view = camera.GetViewMatrix();
+		shader.setUniform4mat("view", view);
+		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), screenWidth / screenHeight, 0.1f, 100.0f);
+		shader.setUniform4mat("projection", projection);
+
 		for (unsigned int i = 0; i < 10; i++)
 		{
+			// calculate the model matrix for each object and pass it to shader before drawing
 			glm::mat4 model = glm::mat4(1.0f);
 			model = glm::translate(model, cubePositions[i]);
-			if (i % 3 == 0) {
-				float angle = (float)glfwGetTime() * glm::radians(50.0f);
-				model = glm::rotate(model, angle, glm::vec3(1.0f, 0.3f, 0.5f));
-			}
+			//float angle = 20.0f * i;
+			//model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
 			shader.setUniform4mat("model", model);
-			shader.setUniform4mat("view", view);
-			shader.setUniform4mat("projection", projection);
+
+			glDrawArrays(GL_TRIANGLES, 0, 36);
 			glDrawArrays(GL_TRIANGLES, 0, 36);
 		}
-
 		vao.Unbind();
 		shader.Unbind();
-		window.OnUpdate();
+		window.OnUpdate(camera, deltaTime);
 		//std::this_thread::sleep_until(frameStartTime + std::chrono::milliseconds(200));
 	}
 	return 0;
